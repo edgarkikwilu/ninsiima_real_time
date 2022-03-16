@@ -19,6 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('login',[ChatController::class,'login']);
 Route::post('chat',[ChatController::class,'chat']);
 
 // Route::get('broadcasting/auth',function(){
